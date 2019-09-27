@@ -1,0 +1,343 @@
+/* Global Component
+----------------------------- */
+:root {
+    --primary-color: #6743FF;         
+    --secondary-color: #FAABFF;
+    --dark-color: #191919;
+    --light-color: #F3F3F3;
+    --max-width: 1100px;                                                                
+}
+
+
+/* Components | Uitility Classes
+----------------------------------- */
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+
+/* Catagory */
+.category {
+    --interactive-color: #FBB505;
+    --art-color: #F04E21;
+    --video-color: #03A4EF;
+}
+
+
+.category {
+    display: inline-block;
+    color: var(--light-color);
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0.6rem; 
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+}
+
+.category-interactive { background: var(--interactive-color);}
+.category-art { background: var(--art-color);}
+.category-video { background: var(--video-color);}
+
+
+/* buttons */
+.btn {
+    display: inline-block;
+    border: none;
+    background: #191919;
+    color: var(--light-color);
+    padding: 0.5rem 1.5rem; 
+}
+
+.btn-light {background: var(--light-color)}
+.btn-primary {background: var(--primary-color)}
+.btn-seconday {background: var(--seconday-color)}
+
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+
+.sub-btn {
+    background: var(--primary-color);
+    color: #F3F3F3;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* Cards  */
+.card {
+    background: black;
+    padding: 1rem;
+}
+
+.bg-primary {
+    background: var(--primary-color);
+    color: #F3F3F3;
+}
+
+.bg-secondary {
+    background: var(--secondary-color);
+    color: #F3F3F3;
+}
+
+.bg-dark   {
+    background: var(--dark-color);
+    color: #F3F3F3;
+}
+
+.bg-light {
+    background: var(--light-color);
+    color: #F3F3F3;
+}
+
+.bg-new {
+    background: #DC044C;
+    color: #F3F3F3;
+}
+
+.l-heading {
+    font-size: 2rem;
+}
+
+/* Padding */
+
+.py-1 {padding: 1.5rem 0 }
+.py-2 {padding: 2rem 0 }
+.py-3 {padding: 3rem 0 }
+.p-1 {padding: 1.5rem }
+.p-2 {padding: 2rem }
+.p-3 {padding: 3rem }
+
+
+/* CSS Reset of Box Model; box-sizing?
+--------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body
+------------------------- */
+body {
+    font-family: 'Amiri', serif;
+    line-height: 1.5;
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+     /* Click Links */
+    a {
+        color: #F3F3F3;
+        text-decoration: none;
+    }
+
+    /* UL */
+    ul {
+        list-style: none;
+    }
+
+    /* Images on page */
+    img {
+        width: 100%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Righteous', cursive;
+        line-height: 1.3;
+        margin-bottom: .55rem;
+    }
+
+/* Main Navigation
+------------------------------------- */
+#main-nav {
+    background: var(--primary-color);
+    top: 0;
+    z-index: 2;
+    /* position: sticky; */
+}
+
+#main-nav .container {
+    display: grid;
+    grid-template-columns: 6fr 3fr 2fr;
+    padding: 1rem;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 220px;
+}
+
+#main-nav ul {
+    justify-self: end;
+    display: flex;
+}
+
+#main-nav ul li a {
+    padding: 0.75rem;
+    font-weight: bold;
+}
+
+#main-nav ul li a.current {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#main-nav ul li a:hover {
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+
+#main-nav .social {
+    justify-self: center;
+}
+
+#main-nav .social-media i {
+    color: white;
+    margin-right: .5rem;
+}
+
+/* Showcase Header
+--------------------------------- */
+#showcase   {
+    color: var(--light-color);
+    background: var(--dark-color);
+    padding: 2rem;
+    position: relative;
+}
+
+#showcase:before {
+    content: '';
+    background: url('../images/vendors/apple-art.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+#showcase .showcase-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+#showcase .showcase-content {
+    z-index: 1;
+}
+#showcase .showcase-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Home Articles Section
+---------------------------- */
+#home-articles .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+#home-articles .articles-container > *:first-child,
+#home-articles .articles-container > *:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    grid-column: 1 / span 2;
+
+}
+
+#home-articles .articles-container > *:last-child {
+    grid-column: 2 / span 2;
+
+}
+
+
+/* Footer 
+------------------------------- */
+#main-footer {
+    color: var(--dark-color);
+    color: white;
+    height: 5rem;
+}
+
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    opacity: 0.1;
+}
+
+.footer-content {
+ display: flex;
+ justify-content: space-between;
+ height: 5rem;
+ align-items: center;
+}
+
+.social .fab {
+    margin-right: 0.5rem;
+}
+
+
+/* About Me Section
+---------------------------- */
+
+.page-container {
+    width: 620px;
+    margin: auto;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+.card .profile {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+} 
+
+
+/* Contact Form
+----------------------- */
+#contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact-form input, 
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px #dddddd solid;
+
+
+}
+
+#contact-form textarea {
+    height: 200px;
+}
