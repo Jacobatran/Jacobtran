@@ -9,7 +9,7 @@
 }
 
 
-/* Components | Uitility Classes
+/* Uitility Class
 ----------------------------------- */
 .container {
     max-width: var(--max-width);
@@ -18,13 +18,22 @@
     overflow: hidden;
 }
 
+.l-heading {
+    font-size: 2rem;
+}
 
-/* Catagory */
+
+/* Reuseable Catagory */
 .category {
     --interactive-color: #FBB505;
     --art-color: #F04E21;
     --video-color: #03A4EF;
 }
+
+
+.category-interactive { background: var(--interactive-color);}
+.category-art { background: var(--art-color);}
+.category-video { background: var(--video-color);}
 
 
 .category {
@@ -37,12 +46,8 @@
     margin-bottom: 0.5rem;
 }
 
-.category-interactive { background: var(--interactive-color);}
-.category-art { background: var(--art-color);}
-.category-video { background: var(--video-color);}
 
-
-/* buttons */
+/* Reuseable Buttons */
 .btn {
     display: inline-block;
     border: none;
@@ -74,11 +79,18 @@
     border-radius: 20px;
 }
 
-/* Cards  */
+/* Reuseble cards  */
 .card {
     background: black;
     padding: 1rem;
 }
+
+.card-2 {
+    background: black;
+    padding: 2rem;
+    width: auto;
+}
+
 
 .bg-primary {
     background: var(--primary-color);
@@ -105,12 +117,8 @@
     color: #F3F3F3;
 }
 
-.l-heading {
-    font-size: 2rem;
-}
 
 /* Padding */
-
 .py-1 {padding: 1.5rem 0 }
 .py-2 {padding: 2rem 0 }
 .py-3 {padding: 3rem 0 }
@@ -119,7 +127,7 @@
 .p-3 {padding: 3rem }
 
 
-/* CSS Reset of Box Model; box-sizing?
+/* CSS Reset of Box Model; box-sizing
 --------------------------- */
 * {
     margin: 0;
@@ -136,7 +144,7 @@ body {
     background: var(--dark-color);
     color: var(--light-color);
 }
-     /* Click Links */
+     /* links */
     a {
         color: #F3F3F3;
         text-decoration: none;
@@ -164,7 +172,6 @@ body {
     background: var(--primary-color);
     top: 0;
     z-index: 2;
-    /* position: sticky; */
 }
 
 #main-nav .container {
@@ -207,8 +214,11 @@ body {
     margin-right: .5rem;
 }
 
-/* Showcase Header
---------------------------------- */
+
+/* Page Sections 
+-------------------------- */
+
+    /* Showcase Header */
 #showcase   {
     color: var(--light-color);
     background: var(--dark-color);
@@ -242,8 +252,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* Home Articles Section
----------------------------- */
+    /* Home article cards */
 #home-articles .articles-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -263,6 +272,42 @@ body {
 #home-articles .articles-container > *:last-child {
     grid-column: 2 / span 2;
 
+}
+
+    /* About Me */
+.page-container {
+    width: 620px;
+    margin: auto;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.card .profile {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+} 
+
+    /* Contact Form */
+#contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact-form input, 
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px #dddddd solid;
+}
+
+#contact-form textarea {
+    height: 200px;
 }
 
 
@@ -296,48 +341,4 @@ hr {
 
 .social .fab {
     margin-right: 0.5rem;
-}
-
-
-/* About Me Section
----------------------------- */
-
-.page-container {
-    width: 620px;
-    margin: auto;
-    text-align: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-
-.card .profile {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-} 
-
-
-/* Contact Form
------------------------ */
-#contact-form .form-group {
-    margin-bottom: 20px;
-}
-
-#contact-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-#contact-form input, 
-#contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px #dddddd solid;
-
-
-}
-
-#contact-form textarea {
-    height: 200px;
 }
